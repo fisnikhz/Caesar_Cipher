@@ -39,9 +39,12 @@ public class CaesarCipher {
          //TODO
     }
 
-    public static String decrypt(String text, int key) {
-      //TODO
-    }
+
+        public static String decrypt(String text, int key) {
+            return encrypt(text, 26 - key);
+        }
+
+
 
     public static String calculateFrequency(String text) {
           int[] frequency = new int[26];
