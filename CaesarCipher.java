@@ -44,6 +44,20 @@ public class CaesarCipher {
     }
 
     public static String calculateFrequency(String text) {
-          //TODO
+          int[] frequency = new int[26];
+        int totalLetters = 0;
+        for(int i = 0;i < text.length();i++) {
+            char c = text.charAt(i);
+            if(c >= 'a' && c <= 'z') {
+                frequency[c - 'a']++;
+                totalLetters++;
+            }
+        }
+        String result = "";
+        for(int i = 0;i < 26;i++) {
+            double percentage = (double)frequency[i] / totalLetters * 100;
+            result += (char) ('a' + 1) + ":" + String.format("%2f",percentage) + "%\n";
+        }
+        return result;
     }
 }
