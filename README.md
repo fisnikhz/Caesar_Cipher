@@ -1,4 +1,4 @@
-#Project2 DataSecurity Gr19 
+# Project2 DataSecurity Gr19 
 Caesar Cipher
 
 This repository contains a Java implementation of the Caesar Cipher encryption and decryption algorithm, as well as a frequency analysis method to calculate the percentage of each letter in a given text.
