@@ -36,13 +36,27 @@ public class CaesarCipher {
     
 
     public static String encrypt(String text, int key) {
-         //TODO
+        String result = "";
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+            if (c >= 'a' && c <= 'z') {
+                result += (char) ((c - 'a' + key) % 26 + 'a');
+            } else if (c >= 'A' && c <= 'Z') {
+                result += (char) ((c - 'A' + key) % 26 + 'A');
+            } else {
+                result += c;
+            }
+        }
+        return result;
+
     }
 
 
         public static String decrypt(String text, int key) {
             return encrypt(text, 26 - key);
         }
+
+
 
 
 
