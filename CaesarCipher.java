@@ -70,9 +70,9 @@ public class CaesarCipher {
             }
         }
         String result = "";
-        for(int i = 0;i < 26;i++) {
-            double percentage = (double)frequency[i] / totalLetters * 100;
-            result += (char) ('a' + 1) + ":" + String.format("%2f",percentage) + "%\n";
+        for (int i = 0; i < 26; i++) {
+            double percentage = (double) frequency[i] / totalLetters * 100;
+            result += (char) ('a' + i) + ": " + String.format("%.2f", percentage) + "%\n";
         }
         return result;
     }
